@@ -1,0 +1,41 @@
+---
+// src/components/Navigation.astro
+import { navItems } from '../data/navigation';
+const currentPath = Astro.url.pathname;
+---
+
+<div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+        {navItems.map(({ path, label }) => (
+                <li class="nav-item">
+                    <a
+                            class:list={[
+                                'nav-link',
+                                'px-3',
+                                { active: currentPath === path }
+                            ]}
+                            href={path}
+                            aria-current={currentPath === path ? 'page' : undefined}
+                    >
+                        {label}
+                    </a>
+                </li>
+        ))}
+    </ul>
+</div>
+
+<style>
+    .nav-link {
+        color: #fff !important;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+        color: #A88418 !important;
+    }
+
+    .nav-link.active {
+        color: #A88418 !important;
+    }
+</style>

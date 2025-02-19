@@ -1,0 +1,35 @@
+---
+// src/components/Logo.astro
+import { Image } from 'astro:assets';
+import logoImage from '../assets/logo.png'; // Make sure to add your logo image to this path
+---
+
+<div class="logo-container">
+    <Image
+            src={logoImage}
+            alt="Local 64 Firefighters Union Logo"
+            width={150}
+            height={50}
+            class="logo-image"
+    />
+</div>
+
+<style>
+    .logo-container {
+        height: 50px;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-image {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+    }
+
+    @media (max-width: 768px) {
+        .logo-container {
+            height: 40px;
+        }
+    }
+</style>
