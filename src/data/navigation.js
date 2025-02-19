@@ -1,9 +1,9 @@
 // src/data/navigation.js
 export const navItems = [
-    { path: '/', label: 'Home' },
-    { path: '/about', label: 'About Us' },
-    { path: '/contact', label: 'Contact' },
-    { path: '/events', label: 'Events'},
-    { path: '/donate', label: 'Donate'},
-    { path: '/education', label: 'Education'},
+    { path: '/iaff/', label: 'Home' },
+    { path: '/iaff/about', label: 'About Us' },
+    { path: '/iaff/contact', label: 'Contact' },
+    { path: '/iaff/events', label: 'Events'},
+    { path: '/iaff/donate', label: 'Donate'},
+    { path: '/iaff/education', label: 'Education'},
 ];

@@ -3,6 +3,8 @@
 import MainLayout from '../../layouts/MainLayout.astro';
 import { Image } from 'astro:assets';
 import CprFaq from "../../components/CprFaq.astro";
+import cprPhoto from '../../assets/cprtraining.jpg';
+
 ---
 
 <MainLayout title="CPR Training">
@@ -43,7 +45,7 @@ import CprFaq from "../../components/CprFaq.astro";
 
                     <!-- Image Placeholder -->
                     <div class="image-container my-5">
-                        <img src="/api/placeholder/800/400" alt="CPR demonstration" class="img-fluid rounded shadow"/>
+                        <Image src={cprPhoto} alt="CPR demonstration" class="img-fluid rounded shadow"/>
                     </div>
 
                     <h3 class="mt-5 mb-4">Important Steps in CPR</h3>
