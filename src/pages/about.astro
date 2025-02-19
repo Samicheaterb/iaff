@@ -1,0 +1,252 @@
+ ---
+// src/pages/about.astro
+import MainLayout from '../layouts/MainLayout.astro';
+import { Image } from 'astro:assets';
+ ---
+
+<MainLayout title="About Us">
+    <!-- Hero Section -->
+    <section class="about-hero-section position-relative d-flex align-items-center justify-content-center">
+        <div class="hero-overlay"></div>
+        <div class="container text-center text-white position-relative">
+            <h1 class="display-4 fw-bold mb-4">About Local 64</h1>
+            <p class="lead mb-0">Dedicated to Excellence in Fire Service Since 1918</p>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-4">Our Mission</h2>
+                    <p class="lead mb-5">To promote fire safety, protect the welfare of our firefighters, and serve the Kansas City, Kansas community through excellence in emergency response and public service.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="icon-circle mb-3">
+                                <i class="bi bi-shield-fill text-primary fs-3"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Safety First</h3>
+                            <p class="card-text">Committed to maintaining the highest standards of safety for our firefighters and the community we serve.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="icon-circle mb-3">
+                                <i class="bi bi-people-fill text-primary fs-3"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Community Focus</h3>
+                            <p class="card-text">Building strong relationships with our community through outreach, education, and dedicated service.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="icon-circle mb-3">
+                                <i class="bi bi-star-fill text-primary fs-3"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Excellence</h3>
+                            <p class="card-text">Striving for excellence in training, equipment, and emergency response capabilities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">Our History</h2>
+                    <p>Since 1918, Local 64 has been representing the professional firefighters of Kansas City, Kansas. What started as a small group of dedicated firefighters has grown into a strong organization of over 400 members.</p>
+                    <p>Throughout our history, we have:</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i>Advocated for improved safety standards</li>
+                        <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i>Implemented advanced training programs</li>
+                        <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i>Established community outreach initiatives</li>
+                        <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i>Created support programs for firefighter families</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h4>1918</h4>
+                                <p>Local 64 established in Kansas City, Kansas</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h4>1950s</h4>
+                                <p>Expansion of fire services and implementation of modern equipment</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h4>1980s</h4>
+                                <p>Introduction of advanced medical response capabilities</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h4>Present</h4>
+                                <p>Continuing to serve with state-of-the-art equipment and training</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Leadership</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="rounded-circle overflow-hidden mx-auto mb-3 leadership-image">
+                                <i class="bi bi-person-circle display-1 text-primary"></i>
+                            </div>
+                            <h3 class="h5 mb-2">J.J. Simma</h3>
+                            <p class="text-muted mb-0">President</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <div class="rounded-circle overflow-hidden mx-auto mb-3 leadership-image">
+                                <i class="bi bi-person-circle display-1 text-primary"></i>
+                            </div>
+                            <h3 class="h5 mb-2">Robert Wing</h3>
+                            <p class="text-muted mb-0">Secretary-Treasurer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-primary text-white py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">Join Us in Making a Difference</h2>
+            <p class="lead mb-4">Support our mission to protect and serve the Kansas City community.</p>
+            <a href="/donate" class="btn btn-light btn-lg px-5">Donate Now</a>
+        </div>
+    </section>
+</MainLayout>
+
+<style>
+    .about-hero-section {
+        height: 50vh;
+        min-height: 400px;
+        background-image: url('../assets/group-photo.jpg');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .about-hero-section .container {
+        z-index: 1;
+    }
+
+    .icon-circle {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: rgba(171, 61, 12, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .timeline {
+        position: relative;
+        padding: 2rem;
+    }
+
+    .timeline::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #AB3D0C;
+        transform: translateX(-50%);
+    }
+
+    .timeline-item {
+        margin-bottom: 2rem;
+        position: relative;
+    }
+
+    .timeline-content {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        margin-left: auto;
+        width: 80%;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    .leadership-image {
+        width: 150px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f8f9fa;
+    }
+
+    @media (max-width: 768px) {
+        .timeline::before {
+            left: 0;
+        }
+
+        .timeline-content {
+            width: 90%;
+            margin-left: 2rem !important;
+        }
+
+        .about-hero-section {
+            height: 40vh;
+        }
+    }
+
+    .card {
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+</style>

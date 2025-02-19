@@ -1,7 +1,6 @@
 ---
 // src/components/Footer.astro
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import { navItems } from '../data/navigation';
 const currentYear = new Date().getFullYear();
 ---
 
@@ -11,13 +10,20 @@ const currentYear = new Date().getFullYear();
             <div class="col-lg-4 col-md-6">
                 <h5 class="text-white fw-bold mb-3">Quick Links</h5>
                 <ul class="list-unstyled footer-links">
-                    {navItems.map(({ path, label }) => (
-                            <li class="mb-2">
-                                <a href={path} class="text-white-50 text-decoration-none d-inline-block">
-                                    {label}
-                                </a>
-                            </li>
-                    ))}
+                    <li class="mb-2">
+                        <a target="_blank" rel="noopener noreferrer"
+                           href="http://www.kckfd.org/index.php/iaff64ps/"
+                           class="text-white-50 text-decoration-none d-inline-block">
+                            Peer Support
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a target="_blank" rel="noopener noreferrer"
+                           href="https://www.wycokck.org/Departments/Human-Resources/Labor-Relations#section-7"
+                           class="text-white-50 text-decoration-none d-inline-block">
+                            Wyandotte County Union Info
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="col-lg-4 col-md-6">
@@ -25,28 +31,30 @@ const currentYear = new Date().getFullYear();
                 <ul class="list-unstyled footer-contact">
                     <li class="mb-2 d-flex align-items-center text-white-50">
                         <i class="bi bi-geo-alt-fill me-2"></i>
-                        123 Fire Station St.
+                        PO Box 6243 Kansas City KS 66106
                     </li>
                     <li class="mb-2 d-flex align-items-center text-white-50">
                         <i class="bi bi-telephone-fill me-2"></i>
-                        (555) 123-4567
+                        (913) 788-8839
                     </li>
                     <li class="mb-2 d-flex align-items-center text-white-50">
                         <i class="bi bi-envelope-fill me-2"></i>
-                        info@firefightersunion.org
+                        info@iaff64.com
                     </li>
                 </ul>
             </div>
             <div class="col-lg-4 col-md-6">
                 <h5 class="text-white fw-bold mb-3">Follow Us</h5>
                 <div class="d-flex gap-3 social-links">
-                    <a href="#" class="text-white-50 social-icon p-2 rounded-circle d-inline-flex align-items-center justify-content-center">
+                    <a target="_blank" rel="noopener noreferrer"
+                       href="https://www.facebook.com/p/KCK-Professional-Firefighters-Association-100064730981267/"
+                       class="text-white-50 social-icon p-2 rounded-circle d-inline-flex align-items-center justify-content-center">
                         <i class="bi bi-facebook"></i>
                     </a>
-                    <a href="#" class="text-white-50 social-icon p-2 rounded-circle d-inline-flex align-items-center justify-content-center">
-                        <i class="bi bi-twitter-x"></i>
-                    </a>
-                    <a href="#" class="text-white-50 social-icon p-2 rounded-circle d-inline-flex align-items-center justify-content-center">
+
+                    <a target="_blank" rel="noopener noreferrer"
+                       href="https://www.instagram.com/iaff64ps/"
+                       class="text-white-50 social-icon p-2 rounded-circle d-inline-flex align-items-center justify-content-center">
                         <i class="bi bi-instagram"></i>
                     </a>
                 </div>

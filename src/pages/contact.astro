@@ -1,0 +1,213 @@
+---
+// src/pages/contact.astro
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Contact Us">
+    <!-- Hero Section -->
+    <section class="contact-hero-section position-relative d-flex align-items-center justify-content-center">
+        <div class="hero-overlay"></div>
+        <div class="container text-center text-white position-relative">
+            <h1 class="display-4 fw-bold mb-4">Contact Us</h1>
+            <p class="lead mb-0">Get in touch with Local 64</p>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <!-- Top Row: Contact Info and Facebook Timeline -->
+            <div class="row g-4">
+                <!-- Contact Information -->
+                <div class="col-lg-6">
+                    <h2 class="mb-4">Get In Touch</h2>
+                    <div class="contact-info">
+                        <div class="mb-4">
+                            <h3 class="h5 mb-3">Address</h3>
+                            <p class="d-flex align-items-center">
+                                <i class="bi bi-geo-alt-fill text-primary me-2"></i>
+                                PO Box 6243<br/>Kansas City KS 66106
+                            </p>
+                        </div>
+                        <div class="mb-4">
+                            <h3 class="h5 mb-3">Phone</h3>
+                            <p class="d-flex align-items-center">
+                                <i class="bi bi-telephone-fill text-primary me-2"></i>
+                                <a href="tel:+19137888839" class="text-decoration-none text-dark">(913) 788-8839</a>
+                            </p>
+                        </div>
+                        <div class="mb-4">
+                            <h3 class="h5 mb-3">Email</h3>
+                            <p class="d-flex align-items-center">
+                                <i class="bi bi-envelope-fill text-primary me-2"></i>
+                                <a href="mailto:info@iaff64.com" class="text-decoration-none text-dark">info@iaff64.com</a>
+                            </p>
+                        </div>
+                        <div class="mb-4">
+                            <h3 class="h5 mb-3">Follow Us</h3>
+                            <div class="d-flex gap-3">
+                                <a href="https://www.facebook.com/p/KCK-Professional-Firefighters-Association-100064730981267/"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="social-link">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                                <a href="https://www.instagram.com/iaff64ps/"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="social-link">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Facebook Timeline -->
+                <div class="col-lg-6">
+                    <div class="facebook-container h-100">
+                        <iframe
+                                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fp%2FKCK-Professional-Firefighters-Association-100064730981267%2F&tabs=timeline%2C%20events&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=3343045359297966"
+                                width="340"
+                                height="500"
+                                style="border:none;overflow:hidden"
+                                allowfullscreen="allowfullscreen"
+                                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Row: Contact Form -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h2 class="mb-4">Send Us a Message</h2>
+                            <form id="contactForm" class="needs-validation" novalidate>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="name" class="form-label">Your Name</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                        <div class="invalid-feedback">
+                                            Please provide your name.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid email.
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="subject" class="form-label">Subject</label>
+                                        <input type="text" class="form-control" id="subject" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a subject.
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="message" class="form-label">Message</label>
+                                        <textarea class="form-control" id="message" rows="5" required></textarea>
+                                        <div class="invalid-feedback">
+                                            Please provide your message.
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</MainLayout>
+
+<style>
+    .contact-hero-section {
+        height: 40vh;
+        min-height: 300px;
+        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/group-photo.jpg');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    .contact-hero-section .container {
+        z-index: 1;
+    }
+
+    .contact-info i {
+        font-size: 1.2rem;
+    }
+
+    .social-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: #f8f9fa;
+        border-radius: 50%;
+        color: #AB3D0C;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+        background-color: #AB3D0C;
+        color: white;
+        transform: translateY(-3px);
+    }
+
+    .social-link i {
+        font-size: 1.2rem;
+    }
+
+    .facebook-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: #f8f9fa;
+        padding: 2rem;
+        border-radius: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+        .contact-hero-section {
+            height: 30vh;
+        }
+
+        .facebook-container {
+            padding: 1rem;
+        }
+    }
+</style>
+
+<script>
+    // Form validation
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('contactForm');
+        if (form) {
+            form.addEventListener('submit', function(event) {
+                // if (!form.checkValidity()) {
+                //     event.preventDefault();
+                //     event.stopPropagation();
+                // }
+                form.classList.add('was-validated');
+            });
+        }
+    });
+</script>

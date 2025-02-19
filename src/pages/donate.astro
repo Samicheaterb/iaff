@@ -1,0 +1,204 @@
+---
+// src/pages/donate.astro
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Donate">
+    <!-- Hero Section -->
+    <section class="donate-hero-section position-relative d-flex align-items-center justify-content-center">
+        <div class="hero-overlay"></div>
+        <div class="container text-center text-white position-relative">
+            <h1 class="display-4 fw-bold mb-4">Support Local 64</h1>
+            <p class="lead mb-0">Your contribution helps us serve our community better</p>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <!-- Venmo Featured Section -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <div class="card border-0 shadow-lg featured-donation-card">
+                        <div class="card-body p-5">
+                            <div class="venmo-icon-wrapper mb-4">
+                                <i class="bi bi-cash-stack display-1 text-primary"></i>
+                            </div>
+                            <h2 class="mb-4">Donate via Venmo</h2>
+                            <p class="lead mb-4">Support our mission quickly and securely through Venmo</p>
+                            <a href="https://venmo.com/code?user_id=3358570287595520357"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="btn btn-primary btn-lg px-5 py-3">
+                                <i class="bi bi-phone me-2"></i>
+                                Open Venmo
+                            </a>
+                            <p class="text-muted mt-3 small">You will be redirected to Venmo to complete your donation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Impact Section -->
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="mb-4">Your Impact</h2>
+                    <p class="lead mb-5">Your donations help us make a difference in our community</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm impact-card">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-circle mb-3">
+                                <i class="bi bi-heart-fill text-primary"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Support Families</h3>
+                            <p>Help us provide assistance to firefighter families in times of need</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm impact-card">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-circle mb-3">
+                                <i class="bi bi-book-fill text-primary"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Fund Education</h3>
+                            <p>Support training programs and educational initiatives for our firefighters</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm impact-card">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-circle mb-3">
+                                <i class="bi bi-people-fill text-primary"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Community Outreach</h3>
+                            <p>Enable us to expand our community engagement and safety programs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Ways to Help -->
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h2 class="text-center mb-4">Other Ways to Support</h2>
+                            <div class="support-options">
+                                <div class="d-flex align-items-start mb-4 support-item">
+                                    <i class="bi bi-gift text-primary me-3 fs-4"></i>
+                                    <div>
+                                        <h3 class="h5 mb-2">Mail a Check</h3>
+                                        <p class="mb-0">
+                                            Checks can be mailed to:<br>
+                                            PO Box 6243<br>
+                                            Kansas City KS 66106
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-start mb-4 support-item">
+                                    <i class="bi bi-calendar-event text-primary me-3 fs-4"></i>
+                                    <div>
+                                        <h3 class="h5 mb-2">Attend Our Events</h3>
+                                        <p class="mb-0">Support our cause by participating in our fundraising events</p>
+                                        <a href="/events" class="text-primary text-decoration-none">View upcoming events →</a>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-start support-item">
+                                    <i class="bi bi-megaphone text-primary me-3 fs-4"></i>
+                                    <div>
+                                        <h3 class="h5 mb-2">Spread the Word</h3>
+                                        <p class="mb-0">Follow us on social media and share our mission with others</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</MainLayout>
+
+<style>
+    .donate-hero-section {
+        height: 40vh;
+        min-height: 300px;
+        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/donate-hero.jpg');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    .donate-hero-section .container {
+        z-index: 1;
+    }
+
+    .featured-donation-card {
+        border-radius: 1rem;
+        background: linear-gradient(to bottom right, #fff, #f8f9fa);
+        transition: transform 0.3s ease;
+    }
+
+    .featured-donation-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .venmo-icon-wrapper {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: rgba(171, 61, 12, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .icon-circle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: rgba(171, 61, 12, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .icon-circle i {
+        font-size: 1.5rem;
+    }
+
+    .impact-card {
+        transition: transform 0.3s ease;
+    }
+
+    .impact-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .support-item {
+        transition: transform 0.3s ease;
+    }
+
+    .support-item:hover {
+        transform: translateX(5px);
+    }
+
+    @media (max-width: 768px) {
+        .donate-hero-section {
+            height: 30vh;
+        }
+    }
+</style>

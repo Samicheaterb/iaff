@@ -2,7 +2,7 @@
 // src/pages/index.astro
 import MainLayout from '../layouts/MainLayout.astro';
 import { Image } from 'astro:assets';
-import groupPhoto from '../../public/images/group-photo.jpg';
+import groupPhoto from '../assets/group-photo.jpg';
 ---
 
 <MainLayout title="Home">
@@ -12,7 +12,7 @@ import groupPhoto from '../../public/images/group-photo.jpg';
         <div class="container text-center text-white position-relative">
             <h1 class="display-3 fw-bold mb-4">Local 64 Firefighters</h1>
             <h2 class="display-6 mb-4">Community Services Foundation</h2>
-            <a href="#about" class="btn btn-primary btn-lg">Learn More</a>
+            <a href="#about" class="btn btn-primary btn-lg">Donate (w/venmo)</a>
         </div>
     </section>
 
@@ -111,7 +111,7 @@ import groupPhoto from '../../public/images/group-photo.jpg';
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url('../images/group-photo.jpg');
+        background-image: url('../assets/group-photo.jpg');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
