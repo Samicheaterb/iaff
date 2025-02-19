@@ -6,21 +6,49 @@ const currentPath = Astro.url.pathname;
 
 <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ms-auto">
-        {navItems.map(({ path, label }) => (
-                <li class="nav-item">
-                    <a
-                            class:list={[
-                                'nav-link',
-                                'px-3',
-                                { active: currentPath === path }
-                            ]}
-                            href={path}
-                            aria-current={currentPath === path ? 'page' : undefined}
-                    >
-                        {label}
-                    </a>
-                </li>
-        ))}
+        {navItems.map(({ path, label }) => {
+            if (label === "Education") {
+                return (
+                        <li class="nav-item dropdown">
+                            <a
+                                    class="nav-link dropdown-toggle"
+                                    href="#"
+                                    id="educationDropdown"
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                            >
+                                Education
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="educationDropdown">
+                                <li>
+                                    <a
+                                            class="dropdown-item"
+                                            href="/education/cpr"
+                                    >
+                                        CPR Training
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                );
+            }
+            return (
+                    <li class="nav-item">
+                        <a
+                                class:list={[
+                                    'nav-link',
+                                    'px-3',
+                                    { active: currentPath === path }
+                                ]}
+                                href={path}
+                                aria-current={currentPath === path ? 'page' : undefined}
+                        >
+                            {label}
+                        </a>
+                    </li>
+            );
+        })}
     </ul>
 </div>
 
@@ -38,4 +66,41 @@ const currentPath = Astro.url.pathname;
     .nav-link.active {
         color: #A88418 !important;
     }
+
+    .dropdown-menu {
+        background-color: #333;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .dropdown-item {
+        color: #fff;
+        transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    .dropdown-item:hover {
+        background-color: #444;
+        color: #A88418;
+    }
+
+    .dropdown-toggle::after {
+        vertical-align: middle;
+    }
+
+    /* Active state for dropdown items */
+    .dropdown-item.active {
+        background-color: #444;
+        color: #A88418;
+    }
 </style>
+
+<script>
+    // Initialize Bootstrap dropdowns
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check if Bootstrap is loaded
+        if (typeof bootstrap !== 'undefined') {
+            // Initialize all dropdowns
+            const dropdownElementList = document.querySelectorAll('.dropdown-toggle');
+            const dropdownList = [...dropdownElementList].map(dropdownToggleEl => new bootstrap.Dropdown(dropdownToggleEl));
+        }
+    });
+</script>

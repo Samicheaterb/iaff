@@ -1,0 +1,145 @@
+---
+// src/pages/education/cpr.astro
+import MainLayout from '../../layouts/MainLayout.astro';
+import { Image } from 'astro:assets';
+import CprFaq from "../../components/CprFaq.astro";
+---
+
+<MainLayout title="CPR Training">
+    <div class="container py-5">
+        <!-- Hero Section -->
+        <div class="row mb-5">
+            <div class="col-lg-8">
+                <h1 class="display-4 mb-4">CPR Training</h1>
+                <p class="lead">Learn the basics of life-saving CPR techniques and find opportunities for hands-on training.</p>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="row gx-5">
+            <!-- Left Column - Main Content -->
+            <div class="col-lg-8">
+                <div class="content-section mb-5">
+                    <h2 class="mb-4">Understanding CPR Basics</h2>
+                    <p>This site is designed to create a place to learn the basics with links to further learning if desired. There are events and onsite training available to congregate and learn lifesaving skills.</p>
+
+                    <div class="key-points-box my-4 p-4">
+                        <h3 class="h4 mb-3">Critical CPR Guidelines</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <i class="bi bi-circle-fill me-2 text-primary"></i>
+                                <strong>Compression Rate:</strong> Maintain 100-120 beats per minute
+                            </li>
+                            <li class="mb-3">
+                                <i class="bi bi-circle-fill me-2 text-primary"></i>
+                                <strong>Timing Tip:</strong> Use a familiar song with the right beat to maintain proper rhythm
+                            </li>
+                            <li class="mb-3">
+                                <i class="bi bi-circle-fill me-2 text-primary"></i>
+                                <strong>Chest Exposure:</strong> Initially not required; needed only when using an AED
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Image Placeholder -->
+                    <div class="image-container my-5">
+                        <img src="/api/placeholder/800/400" alt="CPR demonstration" class="img-fluid rounded shadow"/>
+                    </div>
+
+                    <h3 class="mt-5 mb-4">Important Steps in CPR</h3>
+                    <div class="steps-container">
+                        <div class="step-item mb-4">
+                            <h4 class="h5 text-primary">1. Call for Help</h4>
+                            <p>Call 911 immediately. If alone without a phone, perform CPR for 2 minutes before seeking help.</p>
+                        </div>
+                        <div class="step-item mb-4">
+                            <h4 class="h5 text-primary">2. Begin Compressions</h4>
+                            <p>Start chest compressions immediately. Any help is better than no help for a person in cardiac arrest.</p>
+                        </div>
+                        <div class="step-item mb-4">
+                            <h4 class="h5 text-primary">3. Maintain Rhythm</h4>
+                            <p>Keep compressions at 100-120 beats per minute using a familiar song to maintain rhythm.</p>
+                        </div>
+                        <div class="step-item mb-4">
+                            <h4 class="h5 text-primary">4. Switch Providers</h4>
+                            <p>Change compression providers every 2 minutes if possible, as fatigue will set in.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Quick Reference -->
+            <div class="col-lg-4">
+                <div class="quick-reference-box p-4 mb-4">
+                    <h3 class="h4 mb-4">Quick Reference</h3>
+                    <div class="alert alert-info">
+                        <strong>Remember:</strong> Any CPR is better than no CPR
+                    </div>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-3">✓ Call 911 first</li>
+                        <li class="mb-3">✓ Compress at 100-120 BPM</li>
+                        <li class="mb-3">✓ Switch every 2 minutes</li>
+                        <li class="mb-3">✓ Ask others for help</li>
+                        <li>✓ Use AED if available</li>
+                    </ul>
+                </div>
+
+                <div class="training-box p-4">
+                    <h3 class="h4 mb-3">Get Trained</h3>
+                    <p>Join our hands-on training sessions to practice these life-saving skills in person.</p>
+                    <a href="/events" class="btn btn-primary w-100">View Training Events</a>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12">
+                    <hr class="mb-5">
+                    <CprFaq />
+                </div>
+            </div>
+        </div>
+    </div>
+</MainLayout>
+
+<style>
+    .key-points-box {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        border-left: 4px solid #AB3D0C;
+    }
+
+    .bi-circle-fill {
+        font-size: 0.5rem;
+        color: #AB3D0C;
+    }
+
+    .quick-reference-box, .training-box {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .step-item {
+        padding-left: 20px;
+        border-left: 2px solid #dee2e6;
+    }
+
+    .step-item:hover {
+        border-left-color: #AB3D0C;
+    }
+
+    .image-container {
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .content-section {
+        line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+        .quick-reference-box, .training-box {
+            margin-top: 2rem;
+        }
+    }
+</style>
